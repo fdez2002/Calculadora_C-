@@ -1,0 +1,33 @@
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\bin\Debug\CalculadoraWindows.exe.config
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\bin\Debug\CalculadoraWindows.exe
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\bin\Debug\CalculadoraWindows.pdb
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.AssemblyReference.cache
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.SuggestedBindingRedirects.cache
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.Form1.resources
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.Properties.Resources.resources
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.GenerateResource.cache
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.CoreCompileInputs.cache
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.exe
+G:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.pdb
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.AssemblyReference.cache
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.SuggestedBindingRedirects.cache
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.Form1.resources
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.Properties.Resources.resources
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.GenerateResource.cache
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.CoreCompileInputs.cache
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.exe
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.pdb
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\bin\Debug\CalculadoraWindows.exe.config
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\bin\Debug\CalculadoraWindows.exe
+E:\Otros ordenadores\Mi PC CASA\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\bin\Debug\CalculadoraWindows.pdb
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\bin\Debug\CalculadoraWindows.exe.config
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\bin\Debug\CalculadoraWindows.exe
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\bin\Debug\CalculadoraWindows.pdb
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.AssemblyReference.cache
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.SuggestedBindingRedirects.cache
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.Form1.resources
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.Properties.Resources.resources
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.GenerateResource.cache
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.csproj.CoreCompileInputs.cache
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.exe
+C:\Users\Antonio\source\repos\CalculadoraWindows\CalculadoraWindows\CalculadoraWindows\obj\Debug\CalculadoraWindows.pdb
