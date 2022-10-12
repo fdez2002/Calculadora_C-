@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBoxHistorial = new System.Windows.Forms.TextBox();
             this.textBoxNumeros = new System.Windows.Forms.TextBox();
             this.button0 = new System.Windows.Forms.Button();
@@ -47,10 +48,10 @@
             this.buttonIgual = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.buttonBorrarUno = new System.Windows.Forms.Button();
             this.buttonBorrarTodo = new System.Windows.Forms.Button();
             this.buttonPuntoDecimal = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // textBoxHistorial
@@ -64,7 +65,7 @@
             this.textBoxHistorial.Multiline = true;
             this.textBoxHistorial.Name = "textBoxHistorial";
             this.textBoxHistorial.ReadOnly = true;
-            this.textBoxHistorial.Size = new System.Drawing.Size(213, 25);
+            this.textBoxHistorial.Size = new System.Drawing.Size(213, 53);
             this.textBoxHistorial.TabIndex = 0;
             this.textBoxHistorial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -73,12 +74,12 @@
             this.textBoxNumeros.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxNumeros.Font = new System.Drawing.Font("Microsoft YaHei Light", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNumeros.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxNumeros.Location = new System.Drawing.Point(14, 42);
+            this.textBoxNumeros.Location = new System.Drawing.Point(14, 70);
             this.textBoxNumeros.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNumeros.Multiline = true;
             this.textBoxNumeros.Name = "textBoxNumeros";
             this.textBoxNumeros.ReadOnly = true;
-            this.textBoxNumeros.Size = new System.Drawing.Size(213, 40);
+            this.textBoxNumeros.Size = new System.Drawing.Size(213, 30);
             this.textBoxNumeros.TabIndex = 1;
             this.textBoxNumeros.Text = "0";
             this.textBoxNumeros.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -86,10 +87,10 @@
             // button0
             // 
             this.button0.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button0.Location = new System.Drawing.Point(14, 388);
+            this.button0.Location = new System.Drawing.Point(11, 407);
             this.button0.Margin = new System.Windows.Forms.Padding(2);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(54, 54);
+            this.button0.Size = new System.Drawing.Size(112, 54);
             this.button0.TabIndex = 2;
             this.button0.Text = "0";
             this.button0.UseVisualStyleBackColor = true;
@@ -98,7 +99,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(14, 330);
+            this.button1.Location = new System.Drawing.Point(11, 349);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(54, 54);
@@ -110,7 +111,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(72, 330);
+            this.button2.Location = new System.Drawing.Point(69, 349);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(54, 54);
@@ -122,7 +123,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(130, 330);
+            this.button3.Location = new System.Drawing.Point(127, 349);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(54, 54);
@@ -134,7 +135,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(14, 272);
+            this.button4.Location = new System.Drawing.Point(11, 291);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(54, 54);
@@ -146,7 +147,7 @@
             // button5
             // 
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(72, 272);
+            this.button5.Location = new System.Drawing.Point(69, 291);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(54, 54);
@@ -158,7 +159,7 @@
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(130, 272);
+            this.button6.Location = new System.Drawing.Point(127, 291);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(54, 54);
@@ -170,7 +171,7 @@
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(14, 214);
+            this.button7.Location = new System.Drawing.Point(11, 233);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(54, 54);
@@ -182,7 +183,7 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(72, 214);
+            this.button8.Location = new System.Drawing.Point(69, 233);
             this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(54, 54);
@@ -194,7 +195,7 @@
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(130, 214);
+            this.button9.Location = new System.Drawing.Point(127, 233);
             this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(54, 54);
@@ -205,8 +206,9 @@
             // 
             // buttonSumar
             // 
+            this.buttonSumar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonSumar.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSumar.Location = new System.Drawing.Point(188, 330);
+            this.buttonSumar.Location = new System.Drawing.Point(185, 349);
             this.buttonSumar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSumar.Name = "buttonSumar";
             this.buttonSumar.Size = new System.Drawing.Size(54, 54);
@@ -217,8 +219,9 @@
             // 
             // buttonRestar
             // 
+            this.buttonRestar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonRestar.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRestar.Location = new System.Drawing.Point(188, 272);
+            this.buttonRestar.Location = new System.Drawing.Point(185, 291);
             this.buttonRestar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRestar.Name = "buttonRestar";
             this.buttonRestar.Size = new System.Drawing.Size(54, 54);
@@ -229,8 +232,9 @@
             // 
             // buttonMulti
             // 
+            this.buttonMulti.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonMulti.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMulti.Location = new System.Drawing.Point(188, 214);
+            this.buttonMulti.Location = new System.Drawing.Point(185, 233);
             this.buttonMulti.Margin = new System.Windows.Forms.Padding(2);
             this.buttonMulti.Name = "buttonMulti";
             this.buttonMulti.Size = new System.Drawing.Size(54, 54);
@@ -241,8 +245,9 @@
             // 
             // buttonDivi
             // 
+            this.buttonDivi.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonDivi.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDivi.Location = new System.Drawing.Point(188, 156);
+            this.buttonDivi.Location = new System.Drawing.Point(127, 175);
             this.buttonDivi.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDivi.Name = "buttonDivi";
             this.buttonDivi.Size = new System.Drawing.Size(54, 54);
@@ -253,11 +258,12 @@
             // 
             // buttonIgual
             // 
+            this.buttonIgual.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonIgual.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIgual.Location = new System.Drawing.Point(130, 388);
+            this.buttonIgual.Location = new System.Drawing.Point(185, 407);
             this.buttonIgual.Margin = new System.Windows.Forms.Padding(2);
             this.buttonIgual.Name = "buttonIgual";
-            this.buttonIgual.Size = new System.Drawing.Size(112, 54);
+            this.buttonIgual.Size = new System.Drawing.Size(54, 54);
             this.buttonIgual.TabIndex = 16;
             this.buttonIgual.Text = "=";
             this.buttonIgual.UseVisualStyleBackColor = true;
@@ -265,8 +271,9 @@
             // 
             // button10
             // 
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button10.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(130, 156);
+            this.button10.Location = new System.Drawing.Point(69, 175);
             this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(54, 54);
@@ -277,8 +284,9 @@
             // 
             // button11
             // 
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(72, 156);
+            this.button11.Location = new System.Drawing.Point(11, 175);
             this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(54, 54);
@@ -287,21 +295,11 @@
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.AgregarOperador);
             // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(14, 156);
-            this.button12.Margin = new System.Windows.Forms.Padding(2);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(54, 54);
-            this.button12.TabIndex = 19;
-            this.button12.Text = "%";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
             // buttonBorrarUno
             // 
+            this.buttonBorrarUno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBorrarUno.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrarUno.Location = new System.Drawing.Point(188, 98);
+            this.buttonBorrarUno.Location = new System.Drawing.Point(185, 117);
             this.buttonBorrarUno.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBorrarUno.Name = "buttonBorrarUno";
             this.buttonBorrarUno.Size = new System.Drawing.Size(54, 54);
@@ -312,8 +310,9 @@
             // 
             // buttonBorrarTodo
             // 
+            this.buttonBorrarTodo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonBorrarTodo.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBorrarTodo.Location = new System.Drawing.Point(130, 98);
+            this.buttonBorrarTodo.Location = new System.Drawing.Point(185, 175);
             this.buttonBorrarTodo.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBorrarTodo.Name = "buttonBorrarTodo";
             this.buttonBorrarTodo.Size = new System.Drawing.Size(54, 54);
@@ -325,7 +324,7 @@
             // buttonPuntoDecimal
             // 
             this.buttonPuntoDecimal.Font = new System.Drawing.Font("Microsoft YaHei Light", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPuntoDecimal.Location = new System.Drawing.Point(72, 388);
+            this.buttonPuntoDecimal.Location = new System.Drawing.Point(127, 407);
             this.buttonPuntoDecimal.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPuntoDecimal.Name = "buttonPuntoDecimal";
             this.buttonPuntoDecimal.Size = new System.Drawing.Size(54, 54);
@@ -334,15 +333,19 @@
             this.buttonPuntoDecimal.UseVisualStyleBackColor = true;
             this.buttonPuntoDecimal.Click += new System.EventHandler(this.buttonPuntoDecimal_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 500;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(259, 459);
+            this.ClientSize = new System.Drawing.Size(252, 475);
             this.Controls.Add(this.buttonPuntoDecimal);
             this.Controls.Add(this.buttonBorrarTodo);
             this.Controls.Add(this.buttonBorrarUno);
-            this.Controls.Add(this.button12);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.buttonIgual);
@@ -391,10 +394,10 @@
         private System.Windows.Forms.Button buttonIgual;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button buttonBorrarUno;
         private System.Windows.Forms.Button buttonBorrarTodo;
         private System.Windows.Forms.Button buttonPuntoDecimal;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

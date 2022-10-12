@@ -39,6 +39,7 @@ public enum Operacion
     public partial class Form1 : Form
     {
         string signoN;
+        int contador;
         double resultado = 0, resultadoDiviMulti = 1;//Almacenamos los resultados
         ArrayList valores = new ArrayList();//Array que contendrá los distintos valores que se agreguen
         Operacion operador = Operacion.NoDefinido;//Variable de timo enumerador y por defecto comenzara con noDefinida
@@ -78,10 +79,20 @@ public enum Operacion
          */
         private void AgregarOperador(object sender, EventArgs e)
         {
+
             var botonOperadores = ((Button)sender);//Almacenamos el operador
 
+            if (contador > 0)
+            {
+                botonOperadores.Enabled = false;
+                return;
+
+            }
+            botonOperadores.Enabled = true;
+            
+            
             //Comporbamos si los resultados estan con los valores por defectos, si es asi llamamos al metodo
-            if((resultado == 0) && (resultadoDiviMulti == 1))
+            if ((resultado == 0) && (resultadoDiviMulti == 1))
             {
                 IntroducirDatosArray();
 
@@ -190,27 +201,36 @@ public enum Operacion
                     //En la division tenemos que comprobar si el resultado esta vacio (resultado = 0),
                     //si es asi el primer valor del array lo guardaremos y empezaremos a realizar la division.
                     //Si no e sigual a 0 haremos la division con el contenido del resultado
-                    if (resultado == 0)
-                    {
-                        
-                        resultadoDiviMulti = (double)valores[0];
-                        
 
-                        for (int i = 1; i < valores.Count; i++)
-                        {
-                            
-                            resultadoDiviMulti /= (double)valores[i];
-                        }
-                        resultado = resultadoDiviMulti;
+                    if (textBoxNumeros.Text == "0")
+                    {
+                        timer1.Enabled = true;
+
+
                     }
                     else
                     {
-                        foreach (double numeros in valores)
+                        if (resultado == 0)
                         {
-                            resultado /= numeros;
+
+                            resultadoDiviMulti = (double)valores[0];
+
+
+                            for (int i = 1; i < valores.Count; i++)
+                            {
+
+                                resultadoDiviMulti /= (double)valores[i];
+                            }
+                            resultado = resultadoDiviMulti;
+                        }
+                        else
+                        {
+                            foreach (double numeros in valores)
+                            {
+                                resultado /= numeros;
+                            }
                         }
                     }
-
                     break;
                 case Operacion.Multiplicacion:
                     if (resultado == 0)
@@ -252,6 +272,7 @@ public enum Operacion
          */
         private void resultadoOperacion()
         {
+
             if ((operador == Operacion.Raiz) || (operador == Operacion.Elevar2))
             {
                 textBoxHistorial.Text +=  "=";
@@ -320,6 +341,29 @@ public enum Operacion
             operador = Operacion.NoDefinido;
             textBoxNumeros.Text = "0";
             textBoxHistorial.Text = "";
+            contador = 0;
+            timer1.Enabled = false;
+            textBoxNumeros.BackColor = DefaultBackColor;
+            //botonOperadores.Enabled = true;
+
+
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            textBoxNumeros.Text = "Error!";
+                contador++;
+                if (contador % 2 == 0)
+                {
+                    textBoxNumeros.BackColor = Color.Red;
+                }
+                else
+                {
+                    textBoxNumeros.BackColor = DefaultBackColor;
+                }
+
 
         }
 
@@ -330,7 +374,5 @@ public enum Operacion
             signoN = null;
         }
 
-       
-       
     }
 }
