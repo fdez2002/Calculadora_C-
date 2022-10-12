@@ -15,6 +15,7 @@ using System.Windows.Forms;
  * Debe de tener la funcionalidades típicas de una calculadora simple. 
  * Al realizar una operacon con un operador igual te deja añadir valores hasta que cambies de operadores o pulser el boton igual.
  * Al cambiar de operador realiza el resultado de la anterior operacion y con ese resulatado comienzas la nueva operacion
+ * Si se divide por 0 se activara un parpadeo con un mensaje de Error.
  */
 
 namespace CalculadoraWindows
@@ -24,18 +25,20 @@ namespace CalculadoraWindows
      * he agregado todas las operaciones posibles que hay en esta calculadora.
      * Con este metodo tambien conseguimos que sea mas legible el codigo.
      */
-public enum Operacion
-    { 
-        NoDefinido = 0, 
+    public enum Operacion
+    {
+        NoDefinido = 0,
         Suma = 1,
         Resta = 2,
         Division = 3,
         Multiplicacion = 4,
         Raiz = 5,
         Elevar2 = 6,
-        
+
 
     }
+
+
     public partial class Form1 : Form
     {
         string signoN;
@@ -58,11 +61,11 @@ public enum Operacion
 
             //Comprobamos si textBoxNumeros es igual a 0, si es asi los vacia y le agrega el boton pulsado
             if (textBoxNumeros.Text == "0")
-            
+
                 textBoxNumeros.Text = "";
 
-                textBoxNumeros.Text += boton.Text;
-            
+            textBoxNumeros.Text += boton.Text;
+
 
         }
         /*
@@ -82,15 +85,14 @@ public enum Operacion
 
             var botonOperadores = ((Button)sender);//Almacenamos el operador
 
+            //Comprobamos si el contador que activa el error con el parpadeo es mator a cero;
+            //si es asi salgo del metodo. Se realiza igual con el boton de igual.
             if (contador > 0)
             {
-                botonOperadores.Enabled = false;
                 return;
-
             }
-            botonOperadores.Enabled = true;
-            
-            
+
+
             //Comporbamos si los resultados estan con los valores por defectos, si es asi llamamos al metodo
             if ((resultado == 0) && (resultadoDiviMulti == 1))
             {
@@ -99,7 +101,7 @@ public enum Operacion
             }
 
             //Comprobamos si hay el boton es diferente al boton que se pulso anteriormente 
-            if ((botonOperadores.Text != signoN) && (signoN != null) && (botonOperadores.Text != "=") )
+            if ((botonOperadores.Text != signoN) && (signoN != null) && (botonOperadores.Text != "="))
             {
                 Operaciones();
             }
@@ -200,7 +202,8 @@ public enum Operacion
 
                     //En la division tenemos que comprobar si el resultado esta vacio (resultado = 0),
                     //si es asi el primer valor del array lo guardaremos y empezaremos a realizar la division.
-                    //Si no e sigual a 0 haremos la division con el contenido del resultado
+                    //Si no es igual a 0 haremos la division con el contenido del resultado
+                    //Si se divide entre 0 se activara un parpadeo con un mensaje de error.
 
                     if (textBoxNumeros.Text == "0")
                     {
@@ -250,7 +253,7 @@ public enum Operacion
                     }
                     break;
                 case Operacion.Raiz:
-                    
+
                     resultado = Math.Sqrt(Convert.ToDouble(textBoxNumeros.Text));//Con este metodo nos ayuda a realizar directamente la operacion de raiz
                     break;
                 case Operacion.Elevar2:
@@ -258,12 +261,12 @@ public enum Operacion
                     resultado = Math.Pow((Convert.ToDouble(textBoxNumeros.Text)), 2);//Nos eleva directamente al numero que hemos asignado, en este caso 2
                     break;
             }
-            
-           
+
+
             valores.Clear();//Limpiamos el array
 
 
-            
+
             resultadoOperacion();
         }
 
@@ -275,7 +278,7 @@ public enum Operacion
 
             if ((operador == Operacion.Raiz) || (operador == Operacion.Elevar2))
             {
-                textBoxHistorial.Text +=  "=";
+                textBoxHistorial.Text += "=";
                 textBoxNumeros.Text = Convert.ToString(resultado);
 
             }
@@ -299,10 +302,10 @@ public enum Operacion
             //Comprobamos si la longitud de la caja es mayor a uno.
             //
             //Si la longitud es menor que 1, no habra valores que leer.
-            
+
             if (textBoxNumeros.Text.Length > 1)
             {
-                textBoxNumeros.Text  = textBoxNumeros.Text.Substring(0, textBoxNumeros.TextLength -1);//elimina de la posicion 0 a la longitud del textBoxNumeros
+                textBoxNumeros.Text = textBoxNumeros.Text.Substring(0, textBoxNumeros.TextLength - 1);//elimina de la posicion 0 a la longitud del textBoxNumeros
 
                 //Cuando la longitud del textBoxNumeros sea 0, le agregamos un 0 al  textBoxNumeros
                 if (textBoxNumeros.Text.Length == 0)
@@ -321,7 +324,7 @@ public enum Operacion
         private void buttonPuntoDecimal_Click(object sender, EventArgs e)
         {
             if (textBoxNumeros.Text.Contains(","))//Comprobamos si textBoxNumeros contiene alguna coma, si es asi nos salimos del if y no agregamos comas
-            { 
+            {
                 return;
             }
             textBoxNumeros.Text += ",";
@@ -344,31 +347,38 @@ public enum Operacion
             contador = 0;
             timer1.Enabled = false;
             textBoxNumeros.BackColor = DefaultBackColor;
-            //botonOperadores.Enabled = true;
 
 
 
         }
 
+        //Al crear un error en al division por dividir entr 0 se activa un parpadeo y un mensaje de Error.
+        //La velocidad del parpadeo se ha especificado en el timer
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+
             textBoxNumeros.Text = "Error!";
-                contador++;
-                if (contador % 2 == 0)
-                {
-                    textBoxNumeros.BackColor = Color.Red;
-                }
-                else
-                {
-                    textBoxNumeros.BackColor = DefaultBackColor;
-                }
+            contador++;
+            if (contador % 2 == 0)
+            {
+                textBoxNumeros.BackColor = Color.Red;
+            }
+            else
+            {
+                textBoxNumeros.BackColor = DefaultBackColor;
+            }
 
 
         }
 
+        //Metodo que activa el boton de igual
         private void buttonIgual_Click(object sender, EventArgs e)
         {
+            if (contador > 0)
+            {
+                return;
+            }
             IntroducirDatosArray();
             Operaciones();
             signoN = null;
